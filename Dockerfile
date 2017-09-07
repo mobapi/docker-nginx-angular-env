@@ -1,17 +1,17 @@
-FROM nginx
+FROM nginx:1.12
 
 RUN apt-get update && \
-	apt-get install -y curl && \
+	apt-get install -y curl gnupg2 && \
 	curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 	apt-get install -y nodejs && \
 	npm install -g gulp
 
-RUN mkdir /startup
+RUN mkdir /scripts
 
-ADD startup/* /startup/
+ADD scripts/* /scripts/
 
-RUN chmod 755 /startup/startup.sh
+RUN chmod 755 /scripts/startup.sh
 
-RUN cd startup && npm up
+RUN cd scripts && npm up
 
-CMD ["sh", "-c", "/startup/startup.sh"]
+CMD ["sh", "-c", "/scripts/startup.sh"]

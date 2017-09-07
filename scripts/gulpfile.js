@@ -23,10 +23,10 @@ console.dir(configureSetup.constants);
 
 function usage() {
 	console.log("Usage:");
-	console.log("\tgulp --module <module> [--prefix <prefix>] --output <output>");
+	console.log("\tgulp [--prefix <prefix>] --module <module> --output <output>");
 	console.log();
-	console.log("\t\tmodule: angular module name");
 	console.log("\t\tprefix: environment variables prefix");
+	console.log("\t\tmodule: angular module name");
 	console.log("\t\toutput: output file path");
 }
 
