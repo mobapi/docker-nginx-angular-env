@@ -1,6 +1,6 @@
 # docker-nginx-angular-env
 
-Dockerfile for nginx with automagic angular constants creation from environment variables.
+Dockerfile for nginx with automagic angular 1.* constants creation from environment variables.
 
 ## Usage
 
